@@ -1,5 +1,5 @@
 /**
- * Core Type Definitions for Sub2API Frontend
+ * Core Type Definitions for OminiAI Frontend
  */
 
 // ==================== Common Types ====================
@@ -614,17 +614,17 @@ export interface GeminiCredentials {
   refresh_token?: string
   oauth_type?: 'code_assist' | 'google_one' | 'ai_studio' | string
   tier_id?:
-    | 'google_one_free'
-    | 'google_ai_pro'
-    | 'google_ai_ultra'
-    | 'gcp_standard'
-    | 'gcp_enterprise'
-    | 'aistudio_free'
-    | 'aistudio_paid'
-    | 'LEGACY'
-    | 'PRO'
-    | 'ULTRA'
-    | string
+  | 'google_one_free'
+  | 'google_ai_pro'
+  | 'google_ai_ultra'
+  | 'gcp_standard'
+  | 'gcp_enterprise'
+  | 'aistudio_free'
+  | 'aistudio_paid'
+  | 'LEGACY'
+  | 'PRO'
+  | 'ULTRA'
+  | string
   project_id?: string
   token_type?: string
   scope?: string

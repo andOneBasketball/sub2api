@@ -182,8 +182,8 @@ export default {
 
   // Setup Wizard
   setup: {
-    title: 'Sub2API Setup',
-    description: 'Configure your Sub2API instance',
+    title: 'OminiAI Setup',
+    description: 'Configure your OminiAI instance',
     database: {
       title: 'Database Configuration',
       description: 'Connect to your PostgreSQL database',
@@ -1694,7 +1694,7 @@ export default {
         antigravityOauth: 'Antigravity OAuth',
         antigravityApikey: 'Connect via Base URL + API Key',
         soraApiKey: 'API Key / Upstream',
-        soraApiKeyHint: 'Connect to another Sub2API or compatible API',
+        soraApiKeyHint: 'Connect to another OminiAI or compatible API',
         soraBaseUrlRequired: 'Sora API Key account requires a Base URL',
         soraBaseUrlInvalidScheme: 'Base URL must start with http:// or https://',
         upstream: 'Upstream',
@@ -2178,54 +2178,54 @@ export default {
           pleaseEnterSessionToken: 'Please enter Session Token'
         },
         // Gemini specific
-	        gemini: {
-	          title: 'Gemini Account Authorization',
-	          followSteps: 'Follow these steps to authorize your Gemini account:',
-	          step1GenerateUrl: 'Generate the authorization URL',
-	          generateAuthUrl: 'Generate Auth URL',
-	          projectIdLabel: 'Project ID (optional)',
-	          projectIdPlaceholder: 'e.g. my-gcp-project or cloud-ai-companion-xxxxx',
-	          projectIdHint:
-	            'Leave empty to auto-detect after code exchange. If auto-detection fails, fill it in and re-generate the auth URL to try again.',
-	          howToGetProjectId: 'How to get',
-	          step2OpenUrl: 'Open the URL in your browser and complete authorization',
-	          openUrlDesc:
-	            'Open the authorization URL in a new tab, log in to your Google account and authorize.',
-	          step3EnterCode: 'Enter Authorization URL or Code',
-	          authCodeDesc:
-	            'After authorization, copy the callback URL (recommended) or just the code and paste it below.',
-	          authCode: 'Callback URL or Code',
-	          authCodePlaceholder:
-	            'Option 1 (recommended): Paste the callback URL\nOption 2: Paste only the code value',
-	          authCodeHint: 'The system will auto-extract code/state from the URL.',
+        gemini: {
+          title: 'Gemini Account Authorization',
+          followSteps: 'Follow these steps to authorize your Gemini account:',
+          step1GenerateUrl: 'Generate the authorization URL',
+          generateAuthUrl: 'Generate Auth URL',
+          projectIdLabel: 'Project ID (optional)',
+          projectIdPlaceholder: 'e.g. my-gcp-project or cloud-ai-companion-xxxxx',
+          projectIdHint:
+            'Leave empty to auto-detect after code exchange. If auto-detection fails, fill it in and re-generate the auth URL to try again.',
+          howToGetProjectId: 'How to get',
+          step2OpenUrl: 'Open the URL in your browser and complete authorization',
+          openUrlDesc:
+            'Open the authorization URL in a new tab, log in to your Google account and authorize.',
+          step3EnterCode: 'Enter Authorization URL or Code',
+          authCodeDesc:
+            'After authorization, copy the callback URL (recommended) or just the code and paste it below.',
+          authCode: 'Callback URL or Code',
+          authCodePlaceholder:
+            'Option 1 (recommended): Paste the callback URL\nOption 2: Paste only the code value',
+          authCodeHint: 'The system will auto-extract code/state from the URL.',
           redirectUri: 'Redirect URI',
           redirectUriHint:
             'This must be configured in your Google OAuth client and must match exactly.',
           confirmRedirectUri:
             'I have configured this Redirect URI in the Google OAuth client (must match exactly)',
-	          invalidRedirectUri: 'Redirect URI must be a valid http(s) URL',
-	          redirectUriNotConfirmed: 'Please confirm the Redirect URI is configured correctly',
-	          missingRedirectUri: 'Missing redirect URI',
-	          failedToGenerateUrl: 'Failed to generate Gemini auth URL',
-	          missingExchangeParams: 'Missing auth code, session ID, or state',
-	          failedToExchangeCode: 'Failed to exchange Gemini auth code',
-	          missingProjectId: 'GCP Project ID retrieval failed: Your Google account is not linked to an active GCP project. Please activate GCP and bind a credit card in Google Cloud Console, or manually enter the Project ID during authorization.',
-	          modelPassthrough: 'Gemini Model Passthrough',
-	          modelPassthroughDesc:
-	            'All model requests are forwarded directly to the Gemini API without model restrictions or mappings.',
-	          stateWarningTitle: 'Note',
-	          stateWarningDesc: 'Recommended: paste the full callback URL (includes code & state).',
-	          oauthTypeLabel: 'OAuth Type',
+          invalidRedirectUri: 'Redirect URI must be a valid http(s) URL',
+          redirectUriNotConfirmed: 'Please confirm the Redirect URI is configured correctly',
+          missingRedirectUri: 'Missing redirect URI',
+          failedToGenerateUrl: 'Failed to generate Gemini auth URL',
+          missingExchangeParams: 'Missing auth code, session ID, or state',
+          failedToExchangeCode: 'Failed to exchange Gemini auth code',
+          missingProjectId: 'GCP Project ID retrieval failed: Your Google account is not linked to an active GCP project. Please activate GCP and bind a credit card in Google Cloud Console, or manually enter the Project ID during authorization.',
+          modelPassthrough: 'Gemini Model Passthrough',
+          modelPassthroughDesc:
+            'All model requests are forwarded directly to the Gemini API without model restrictions or mappings.',
+          stateWarningTitle: 'Note',
+          stateWarningDesc: 'Recommended: paste the full callback URL (includes code & state).',
+          oauthTypeLabel: 'OAuth Type',
           needsProjectId: 'Built-in OAuth (Code Assist)',
           needsProjectIdDesc: 'Requires GCP project and Project ID',
           noProjectIdNeeded: 'Custom OAuth (AI Studio)',
           noProjectIdNeededDesc: 'Requires admin-configured OAuth client',
-	          aiStudioNotConfiguredShort: 'Not configured',
-	          aiStudioNotConfiguredTip:
-	            'AI Studio OAuth is not configured: set GEMINI_OAUTH_CLIENT_ID / GEMINI_OAUTH_CLIENT_SECRET and add Redirect URI: http://localhost:1455/auth/callback (Consent screen scopes must include https://www.googleapis.com/auth/generative-language.retriever)',
-	          aiStudioNotConfigured:
-	            'AI Studio OAuth is not configured: set GEMINI_OAUTH_CLIENT_ID / GEMINI_OAUTH_CLIENT_SECRET and add Redirect URI: http://localhost:1455/auth/callback'
-	        },
+          aiStudioNotConfiguredShort: 'Not configured',
+          aiStudioNotConfiguredTip:
+            'AI Studio OAuth is not configured: set GEMINI_OAUTH_CLIENT_ID / GEMINI_OAUTH_CLIENT_SECRET and add Redirect URI: http://localhost:1455/auth/callback (Consent screen scopes must include https://www.googleapis.com/auth/generative-language.retriever)',
+          aiStudioNotConfigured:
+            'AI Studio OAuth is not configured: set GEMINI_OAUTH_CLIENT_ID / GEMINI_OAUTH_CLIENT_SECRET and add Redirect URI: http://localhost:1455/auth/callback'
+        },
         // Antigravity specific
         antigravity: {
           title: 'Antigravity Account Authorization',
@@ -2242,20 +2242,20 @@ export default {
           authCode: 'Authorization URL or Code',
           authCodePlaceholder:
             'Option 1: Copy the complete URL\n(http://localhost:xxx/auth/callback?code=...)\nOption 2: Copy only the code parameter value',
-                    authCodeHint: 'You can copy the entire URL or just the code parameter value, the system will auto-detect',
-                    failedToGenerateUrl: 'Failed to generate Antigravity auth URL',
-                    missingExchangeParams: 'Missing code, session ID, or state',
-                    failedToExchangeCode: 'Failed to exchange Antigravity auth code',
-                    // Refresh Token auth
-                    refreshTokenAuth: 'Manual RT',
-                    refreshTokenDesc: 'Enter your existing Antigravity Refresh Token. Supports batch input (one per line). The system will automatically validate and create accounts.',
-                    refreshTokenPlaceholder: 'Paste your Antigravity Refresh Token...\nSupports multiple tokens, one per line',
-                    validating: 'Validating...',
-                    validateAndCreate: 'Validate & Create',
-                    pleaseEnterRefreshToken: 'Please enter Refresh Token',
-                    failedToValidateRT: 'Failed to validate Refresh Token'
-                  }
-                },      // Gemini specific (platform-wide)
+          authCodeHint: 'You can copy the entire URL or just the code parameter value, the system will auto-detect',
+          failedToGenerateUrl: 'Failed to generate Antigravity auth URL',
+          missingExchangeParams: 'Missing code, session ID, or state',
+          failedToExchangeCode: 'Failed to exchange Antigravity auth code',
+          // Refresh Token auth
+          refreshTokenAuth: 'Manual RT',
+          refreshTokenDesc: 'Enter your existing Antigravity Refresh Token. Supports batch input (one per line). The system will automatically validate and create accounts.',
+          refreshTokenPlaceholder: 'Paste your Antigravity Refresh Token...\nSupports multiple tokens, one per line',
+          validating: 'Validating...',
+          validateAndCreate: 'Validate & Create',
+          pleaseEnterRefreshToken: 'Please enter Refresh Token',
+          failedToValidateRT: 'Failed to validate Refresh Token'
+        }
+      },      // Gemini specific (platform-wide)
       gemini: {
         helpButton: 'Help',
         helpDialog: {
@@ -2422,7 +2422,7 @@ export default {
       selectTestModel: 'Select Test Model',
       testModel: 'Test model',
       testPrompt: 'Prompt: "hi"',
-      soraUpstreamBaseUrlHint: 'Upstream Sora service URL (another Sub2API instance or compatible API)',
+      soraUpstreamBaseUrlHint: 'Upstream Sora service URL (another OminiAI instance or compatible API)',
       soraTestHint: 'Sora test runs connectivity and capability checks (/backend/me, subscription, Sora2 invite and remaining quota).',
       soraTestTarget: 'Target: Sora account capability',
       soraTestMode: 'Mode: Connectivity + Capability checks',
@@ -3761,10 +3761,11 @@ export default {
         siteKeyHint: 'Get this from your Cloudflare Dashboard',
         cloudflareDashboard: 'Cloudflare Dashboard',
         secretKeyHint: 'Server-side verification key (keep this secret)',
-        secretKeyConfiguredHint: 'Secret key configured. Leave empty to keep the current value.'      },
+        secretKeyConfiguredHint: 'Secret key configured. Leave empty to keep the current value.'
+      },
       linuxdo: {
         title: 'LinuxDo Connect Login',
-        description: 'Configure LinuxDo Connect OAuth for Sub2API end-user login',
+        description: 'Configure LinuxDo Connect OAuth for OminiAI end-user login',
         enable: 'Enable LinuxDo Login',
         enableHint: 'Show LinuxDo login on the login/register pages',
         clientId: 'Client ID',
@@ -3816,7 +3817,7 @@ export default {
         title: 'Site Settings',
         description: 'Customize site branding',
         siteName: 'Site Name',
-        siteNamePlaceholder: 'Sub2API',
+        siteNamePlaceholder: 'OminiAI',
         siteNameHint: 'Displayed in emails and page titles',
         siteSubtitle: 'Site Subtitle',
         siteSubtitlePlaceholder: 'Subscription to API Conversion Platform',
@@ -3904,7 +3905,7 @@ export default {
         fromEmail: 'From Email',
         fromEmailPlaceholder: "noreply{'@'}example.com",
         fromName: 'From Name',
-        fromNamePlaceholder: 'Sub2API',
+        fromNamePlaceholder: 'OminiAI',
         useTls: 'Use TLS',
         useTlsHint: 'Enable TLS encryption for SMTP connection'
       },
@@ -4279,14 +4280,14 @@ export default {
     // Admin tour steps
     admin: {
       welcome: {
-        title: '👋 Welcome to Sub2API',
-        description: '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Sub2API is a powerful AI service gateway platform that helps you easily manage and distribute AI services.</p><p style="margin-bottom: 12px;"><b>🎯 Core Features:</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>📦 <b>Group Management</b> - Create service tiers (VIP, Free Trial, etc.)</li><li>🔗 <b>Account Pool</b> - Connect multiple upstream AI service accounts</li><li>🔑 <b>Key Distribution</b> - Generate independent API Keys for users</li><li>💰 <b>Billing Control</b> - Flexible rate and quota management</li></ul><p style="color: #10b981; font-weight: 600;">Let\'s complete the initial setup in 3 minutes →</p></div>',
+        title: '👋 Welcome to OminiAI',
+        description: '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">OminiAI is a powerful AI service gateway platform that helps you easily manage and distribute AI services.</p><p style="margin-bottom: 12px;"><b>🎯 Core Features:</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>📦 <b>Group Management</b> - Create service tiers (VIP, Free Trial, etc.)</li><li>🔗 <b>Account Pool</b> - Connect multiple upstream AI service accounts</li><li>🔑 <b>Key Distribution</b> - Generate independent API Keys for users</li><li>💰 <b>Billing Control</b> - Flexible rate and quota management</li></ul><p style="color: #10b981; font-weight: 600;">Let\'s complete the initial setup in 3 minutes →</p></div>',
         nextBtn: 'Start Setup 🚀',
         prevBtn: 'Skip'
       },
       groupManage: {
         title: '📦 Step 1: Group Management',
-        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;"><b>What is a Group?</b></p><p style="margin-bottom: 12px;">Groups are the core concept of Sub2API, like a "service package":</p><ul style="margin-left: 20px; margin-bottom: 12px; font-size: 13px;"><li>🎯 Each group can contain multiple upstream accounts</li><li>💰 Each group has independent billing multiplier</li><li>👥 Can be set as public or exclusive</li></ul><p style="margin-top: 12px; padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>💡 Example:</b> You can create "VIP Premium" (high rate) and "Free Trial" (low rate) groups</p><p style="margin-top: 16px; color: #10b981; font-weight: 600;">👉 Click "Group Management" on the left sidebar</p></div>'
+        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;"><b>What is a Group?</b></p><p style="margin-bottom: 12px;">Groups are the core concept of OminiAI, like a "service package":</p><ul style="margin-left: 20px; margin-bottom: 12px; font-size: 13px;"><li>🎯 Each group can contain multiple upstream accounts</li><li>💰 Each group has independent billing multiplier</li><li>👥 Can be set as public or exclusive</li></ul><p style="margin-top: 12px; padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>💡 Example:</b> You can create "VIP Premium" (high rate) and "Free Trial" (low rate) groups</p><p style="margin-top: 16px; color: #10b981; font-weight: 600;">👉 Click "Group Management" on the left sidebar</p></div>'
       },
       createGroup: {
         title: '➕ Create New Group',
@@ -4379,8 +4380,8 @@ export default {
     // User tour steps
     user: {
       welcome: {
-        title: '👋 Welcome to Sub2API',
-        description: '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Hello! Welcome to the Sub2API AI service platform.</p><p style="margin-bottom: 12px;"><b>🎯 Quick Start:</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>🔑 Create API Key</li><li>📋 Copy key to your application</li><li>🚀 Start using AI services</li></ul><p style="color: #10b981; font-weight: 600;">Just 1 minute, let\'s get started →</p></div>',
+        title: '👋 Welcome to OminiAI',
+        description: '<div style="line-height: 1.8;"><p style="margin-bottom: 16px;">Hello! Welcome to the OminiAI AI service platform.</p><p style="margin-bottom: 12px;"><b>🎯 Quick Start:</b></p><ul style="margin-left: 20px; margin-bottom: 16px;"><li>🔑 Create API Key</li><li>📋 Copy key to your application</li><li>🚀 Start using AI services</li></ul><p style="color: #10b981; font-weight: 600;">Just 1 minute, let\'s get started →</p></div>',
         nextBtn: 'Start 🚀',
         prevBtn: 'Skip'
       },
